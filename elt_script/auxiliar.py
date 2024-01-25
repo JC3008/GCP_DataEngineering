@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r'C:\Users\SALA443\Desktop\Estudos\GCP\GCP_DataEngineering\case_env\Lib\site-packages')
+sys.path.append(r'C:\Users\SALA443\Desktop\Estudos\GCP\case_env\Lib\site-packages')
 
 import datetime as dt
 from datetime import datetime,date,time
@@ -93,7 +93,3 @@ class path():
         return folder + key
     
     
-path(
-    folder='landing',
-    key='daily',
-    context='case').mount()
