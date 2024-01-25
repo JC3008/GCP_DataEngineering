@@ -16,7 +16,7 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS']="C:/Users/SALA443/Downloads/vendas-
 logging.basicConfig(
     
         level=logging.INFO,
-        handlers=[logging.FileHandler("dadoseconomicos.log", mode='w'),
+        handlers=[logging.FileHandler("case.log", mode='w'),
                   logging.StreamHandler()],
         format="%(message)s -  %(funcName)s - %(filename)s - %(asctime)s"
         )
@@ -35,17 +35,32 @@ current_time = datetime.now().strftime("%H:%M:%S")
 tags = {'case':'case',
         'vendas':'vendas'}
 
-# def check_index(self):
-#         '''This method performs validation for inputed index range for
-#         all parameters'''
-#         # index = [self.enviroment, self.provider, self.profile, self.layer, self.project]
-                 
-#         if self.enviroment not in enviroment.values() or self.provider not in provider.values() or self.profile not in profile.values() or self.layer not in layers.values() or self.source not in source.values() or self.target not in target.values() or self.project not in project.values():
-#             logging.error("Unexpected value passed as parameter./nCheck the docstring for path_name().define.")
-#             raise Exception(f"Check if the typed parameters:/n [layers, enviroment, project, provider, profile, source, target] matched with the variables defined in the beginning of the objects.py file") 
+def input_check(input, param):
+    '''
+    input can be:
+    ['daily' or 'monthly' or 'hourly'] for the param 'frequency'
+    ['landing' or 'processed' or 'consume'] for the param 'datalake'
+    ['bronze','silver','gold'] for the param 'data lakehouse'
+    ['local','container'] for the param 'source'
+    '''
+    
+    parameter_list = {
+        'frequency':['daily','monthly','hourly'],
+        'datalake':['landing','processed','consume'],
+        'data lakehouse':['bronze','silver','gold'],
+        'source':['local','container']}
+    
+    if param not in parameter_list.keys():
+        logging.error(f"Please insert a valid parameter like *{parameter_list.keys()}")
+    else:
+        logging.info(f"The param *{param} was set in order to check if the *{input} is a valid input.")
+        
+    if input not in parameter_list[param]:
+        logging.error(" Please type a valid frequency like (daily, hourly ou monthly)")
+        raise ValueError("Invalid parameter was passed!!")
+    else:
+        logging.info(f"Valid parameter *{input} was set!")      
             
-#         else:
-#             logging.info(f"All parameters was validated!")     
 
 class frequency():
     
@@ -69,9 +84,12 @@ class frequency():
             It depends on the variable {pipeline_method} defined in the __init__ method.
             When {pipeline_method} is equal 1 the function uses the value passed inside curly brackets, and when it is equal 0 the function uses the value typed manually.
             '''  
-                
+            input_check(self.frequency, 'frequency')
+            
             if  self.frequency == 'daily':
+                
                 return f"{year}/{str(month).zfill(2)}/{str(day).zfill(2)}/"
+                
             elif self.frequency == 'monthly':
                 return f"{year}/{str(month).zfill(2)}/"
             elif self.frequency == 'hourly':
@@ -93,6 +111,8 @@ class extract:
          self.frequency = frequency
          
     def params(self):  
+        input_check(self.source, self.arquitecture)
+        input_check(self.target, self.arquitecture)
         
         # setting up variables        
         source = {
@@ -116,6 +136,7 @@ class extract:
         
         
         # reading data and adding some metada fields
+        
         df = pd.read_csv(f"{source['local']}/{filename}",sep=';',encoding='utf-8')
         df['loaded_date'] = dt.date.today().day
         df['loaded_time'] = current_time
@@ -124,10 +145,12 @@ class extract:
         df['rows_count'] = len(df)
         df['from'] = self.source
         df['to'] = self.target
+        logging.info("Dataframe criado e metadados inseridos.")
         
         # deletiing some metadata columns from df
         columns=['tags','rows_count','from','to']
         df.drop(columns, inplace=True, axis=1)
+        
   
         
         # saving metadata
@@ -137,10 +160,11 @@ class extract:
         # uploading to gcp
         key = frequency(self.frequency).key()
         storage_client =  storage.Client()
-        bucket_name = bucket[f'{self.arquitecture}'][f'{self.source}']
+        bucket_name = bucket[f'{self.arquitecture}'][f'{self.target}']
         destination_path = f"{key}{self.context}/{filename}"
         bucket = storage_client.get_bucket(bucket_name)        
         bucket.blob(destination_path).upload_from_string(df.to_csv(), 'text/csv')
+        logging.info(f"File {self.filename} containing {len(df)} rows was stored in {self.target} bucket! \n The process_id is {process_id}. Please check the metadata file if you need more information about the pipeline")
         
         
         
