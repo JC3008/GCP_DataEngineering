@@ -1,2 +1,3 @@
-GCP_DataEngineering\case_env
-GCP_DataEngineering\elt_script\.env
+case_env
+elt_script\.env
+elt_script/.env
