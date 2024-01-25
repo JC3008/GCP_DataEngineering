@@ -21,7 +21,7 @@ O arquivo auxiliar.py contém as classes utilizadas. <br>
     daily = yyyy/mm/dd/
     monthly = yyyy/mm/
     hourly = yyyy/mm/dd/hh <br>
-**extract**: Classe desenvolvida para padronizar o script de carga de dados no bucket GCP, de forma que apenas seja preciso passar alguns parâmetros na chamada da função.
+**extract**: Classe desenvolvida para padronizar o script de carga de dados no bucket GCP, de forma que apenas seja preciso passar alguns parâmetros na chamada da função.  <br>
 Exemplo de chamada da função: <br>
 ![Alt text](imagens/extract.png)
 
