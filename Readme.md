@@ -12,6 +12,26 @@ A arquiquetura foi definida como:
 * Banco de dados SQL - MySQL
 * Scripts - Python
 
+# Estrutura das pastas
+Dentro da pasta GCP_DataEngineering temos as pastas:
+### elt_script
+Esta pasta contém o script Python que carrega os dados para o bucket GCP, bem como carrega metadados[process_id;loaded_date;loaded_time;process_id;rows_count;from;to].
+O arquivo auxiliar.py contém as classes utilizadas. <br>
+**frequency**: Classe criada para a definição de estrutura de pastas no destino, de forma que podemos escolher salvar: <br>
+    daily = yyyy/mm/dd/
+    monthly = yyyy/mm/
+    hourly = yyyy/mm/dd/hh <br>
+**extract**: Classe desenvolvida para padronizar o script de carga de dados no bucket GCP, de forma que apenas seja preciso passar alguns parâmetros na chamada da função.
+Exemplo de chamada da função: <br>
+extract( <br>
+    arquitecture='datalake', <br>
+    source='landing', <br>
+    target='consume', <br>
+    filename='empresa_alpha.csv', <br>
+    context='case', <br>
+    frequency='daily').params() <br>
+
+
 
 
 
