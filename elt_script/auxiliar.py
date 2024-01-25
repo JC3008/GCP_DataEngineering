@@ -12,8 +12,6 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import uuid
 
-
-
 os.environ['GOOGLE_APPLICATION_CREDENTIALS']="C:/Users/SALA443/Downloads/vendas-de-412318-2cdd56112d35.json"
 logging.basicConfig(
     
@@ -127,6 +125,11 @@ class extract:
         df['from'] = self.source
         df['to'] = self.target
         
+        # deletiing some metadata columns from df
+        columns=['tags','rows_count','from','to']
+        df.drop(columns, inplace=True, axis=1)
+  
+        
         # saving metadata
         # metadata = df[['process_id','loaded_date','loaded_time','process_id','rows_count','from','to']]
         # metadata.to_csv('metadata/metadata.csv',sep=';',encoding='utf-8',index=None)
@@ -138,6 +141,8 @@ class extract:
         destination_path = f"{key}{self.context}/{filename}"
         bucket = storage_client.get_bucket(bucket_name)        
         bucket.blob(destination_path).upload_from_string(df.to_csv(), 'text/csv')
+        
+        
         
         
 

@@ -1,6 +1,5 @@
 from auxiliar import extract
 
-
 extract(
     arquitecture='datalake',
     source='landing',
