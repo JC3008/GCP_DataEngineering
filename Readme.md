@@ -23,13 +23,8 @@ O arquivo auxiliar.py contém as classes utilizadas. <br>
     hourly = yyyy/mm/dd/hh <br>
 **extract**: Classe desenvolvida para padronizar o script de carga de dados no bucket GCP, de forma que apenas seja preciso passar alguns parâmetros na chamada da função.
 Exemplo de chamada da função: <br>
-extract( <br>
-    arquitecture='datalake', <br>
-    source='landing', <br>
-    target='consume', <br>
-    filename='empresa_alpha.csv', <br>
-    context='case', <br>
-    frequency='daily').params() <br>
+![Alt text](imagen/extract.png)
+
 
 
 
