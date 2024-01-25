@@ -9,6 +9,8 @@ import pandas as pd
 from pathlib import Path
 import uuid
 
+
+
 logging.basicConfig(
     
         level=logging.INFO,
@@ -87,9 +89,23 @@ class path():
          self.context = context
          
     def mount(self):
-        folder = f"{self.folder}/"
+        folder = f"{self.folder}-6638477/"
         key = f"{frequency(self.key).define()}{self.context}/"
         
         return folder + key
-    
-    
+   
+   
+   
+ 
+
+local_source = r'C:\Users\SALA443\Desktop\Estudos\GCP\GCP_DataEngineering\sources\csv'
+container_source = r'workspaces\opt\sources' 
+filename = 'empresa_alpha.csv'
+process = ''
+process_id = uuid.uuid4().hex[:16]  
+
+df = pd.read_csv(f"{local_source}/{filename}",sep=';',encoding='utf-8')
+df['loaded_date'] = dt.date.today().day
+df['loaded_time'] = current_time
+df['tags'] = tags['case']
+df['process_id'] = process_id

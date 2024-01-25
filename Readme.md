@@ -1,4 +1,5 @@
 # Resumo do projeto
+Nome do projeto no GCP: **Vendas-De**
 Este projeto visa a criação de um projeto de engenharia de dados para analisar dados comerciais de duas empresas fictícias.
 
 # Arquitetura
@@ -10,6 +11,9 @@ A arquiquetura foi definida como:
 * Banco de Dados NOSQL - Mongo
 * Banco de dados SQL - MySQL
 * Scripts - Python
+
+
+
 
 
 
