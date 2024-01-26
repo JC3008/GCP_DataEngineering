@@ -3,6 +3,7 @@ Nome do projeto no GCP: **Vendas-De**
 Este projeto visa a criação de um projeto de engenharia de dados para analisar dados comerciais de duas empresas fictícias.
 
 # Arquitetura
+![Alt text](imagens/arquitetura.png)
 A arquiquetura foi definida como:
 * GCP - datalake
 * Bigquery - Data Warehouse
