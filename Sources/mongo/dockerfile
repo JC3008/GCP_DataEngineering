@@ -1,0 +1,6 @@
+FROM mongodb/mongodb-community-server
+
+WORKDIR /APP
+COPY clientes.json /APP
+EXPOSE 27017
+

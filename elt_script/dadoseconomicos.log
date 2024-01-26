@@ -1,9 +1,0 @@
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-25 20:21:25,775
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-25 20:21:25,776
-The param *datalake was set in order to check if the *consume is a valid input. -  input_check - auxiliar.py - 2024-01-25 20:21:25,776
-Valid parameter *consume was set! -  input_check - auxiliar.py - 2024-01-25 20:21:25,777
-Dataframe criado e metadados inseridos. -  params - auxiliar.py - 2024-01-25 20:21:25,782
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-25 20:21:25,783
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-25 20:21:25,784
-File empresa_alpha.csv containing 1 rows was stored in consume bucket! 
- The process_id is b0d1089333bd46f1. Please check the metadata file if you need more information about the pipeline -  params - auxiliar.py - 2024-01-25 20:21:25,784

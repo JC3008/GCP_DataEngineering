@@ -8,3 +8,7 @@ extract(
     context='case',
     frequency='daily').params()
 
+if __name__ == "__main__":
+    
+    extract()
+

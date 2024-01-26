@@ -29,6 +29,43 @@ O arquivo **elt.py** faz as chamadas das funções.
 
 Ainda dentro da pasta GCP_Dataengineering, temos as pastas imagens (guarda as imagens usadas aqui no Readme) e sources (Guarda os arquivos usados como fonte para o estudo). 
 
+# MongoDB Docker
+Para gerar o arquivo usuarios em formato bson do Mongo
+
+**montando a imagem mongo** <br>
+docker build -t mongo:mongo .
+
+**Executando container em segundo plano** <br>
+docker run -d mongo:mongo 
+
+**caso queira checar detalhes da execução em segundo plano execute** <br>
+docker ps ***para checar o id do container que está executando o mongo***
+
+**Para criar a coleção clientes dentro do database vendas**  <br>
+docker exec -it {container_id} mongosh
+docker exec -it d61f6ea1de2f004986f13c006f9c45a5ffebfa371811e8b30b75688b6f7dd15e mongosh
+use vendas
+db.createCollection("clientes")
+
+
+**para importar o clientes.json** <br>
+Clique CTRL+C CTRL+D para sair da execução do mongosh e execute conforme a seguir:
+docker exec -it {container_id} bash ***o container_id é informado assim que iniciada a execução em segundo plano***
+mongoimport --db vendas --collection clientes --file clientes.json --jsonArray
+
+Após completar as etapas você verá uma imagem como abaixo, indicando que o arquivo clientes.json foi carregado na coleção clientes.
+![Alt text](imagens/import_mongo.png)
+
+Para checar a coleção, abra mais um terminal e execute:
+* docker exec -it d61f6ea1de2f004986f13c006f9c45a5ffebfa371811e8b30b75688b6f7dd15e mongosh 
+* use vendas
+* db.clientes.find({})
+
+
+
+
+
+
 
 
 
