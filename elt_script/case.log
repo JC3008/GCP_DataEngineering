@@ -1,16 +1,15 @@
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-25 20:22:53,150
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-25 20:22:53,151
-The param *datalake was set in order to check if the *consume is a valid input. -  input_check - auxiliar.py - 2024-01-25 20:22:53,153
-Valid parameter *consume was set! -  input_check - auxiliar.py - 2024-01-25 20:22:53,154
-Dataframe criado e metadados inseridos. -  params - auxiliar.py - 2024-01-25 20:22:53,158
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-25 20:22:53,160
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-25 20:22:53,160
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-25 20:23:17,858
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-25 20:23:17,860
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-25 20:23:17,861
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-25 20:23:17,862
-Dataframe criado e metadados inseridos. -  params - auxiliar.py - 2024-01-25 20:23:17,866
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-25 20:23:17,868
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-25 20:23:17,868
-File empresa_alpha.csv containing 1 rows was stored in landing bucket! 
- The process_id is 918308c54a694cd1. Please check the metadata file if you need more information about the pipeline -  params - auxiliar.py - 2024-01-25 20:23:18,838
+The param *local_source was set in order to check if the *local_json is a valid input. -  input_check - auxiliarcopy.py - 2024-01-26 19:06:09,975
+Valid parameter *local_json was set! -  input_check - auxiliarcopy.py - 2024-01-26 19:06:09,976
+The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliarcopy.py - 2024-01-26 19:06:09,976
+Valid parameter *landing was set! -  input_check - auxiliarcopy.py - 2024-01-26 19:06:09,977
+The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliarcopy.py - 2024-01-26 19:06:09,978
+Valid parameter *daily was set! -  input_check - auxiliarcopy.py - 2024-01-26 19:06:09,978
+The param *local_source was set in order to check if the *local_csv is a valid input. -  input_check - auxiliarcopy.py - 2024-01-26 19:06:10,996
+Valid parameter *local_csv was set! -  input_check - auxiliarcopy.py - 2024-01-26 19:06:10,999
+The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliarcopy.py - 2024-01-26 19:06:11,005
+Valid parameter *landing was set! -  input_check - auxiliarcopy.py - 2024-01-26 19:06:11,009
+The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliarcopy.py - 2024-01-26 19:06:11,011
+Valid parameter *daily was set! -  input_check - auxiliarcopy.py - 2024-01-26 19:06:11,013
+Dataframe criado e metadados inseridos. -  transfer - auxiliarcopy.py - 2024-01-26 19:06:11,023
+File empresa_alpha.csv containing 1 rows was stored in 2024/01/26/case/empresa_alpha.csv bucket! 
+ The process_id is 14464aa42a8544d7. Please check the metadata file if you need more information about the pipeline -  transfer - auxiliarcopy.py - 2024-01-26 19:06:12,009

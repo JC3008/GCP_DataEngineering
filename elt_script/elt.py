@@ -1,14 +1,19 @@
-from auxiliar import extract
-
-extract(
-    arquitecture='datalake',
-    source='landing',
-    target='landing',
-    filename='empresa_alpha.csv',
-    context='case',
-    frequency='daily').params()
+from auxiliarcopy import extract
 
 if __name__ == "__main__":
+    extract(
+    arquitecture=['local_source','datalake'],
+    source='local_json',
+    destination='landing',
+    filename='clientes.json',
+    context='case',
+    frequency='daily').mongo_to_gcp()
     
-    extract()
+    extract(
+    arquitecture=['local_source','datalake'],
+    source='local_csv',
+    destination='landing',
+    filename='empresa_alpha.csv',
+    context='case',
+    frequency='daily').transfer()
 
