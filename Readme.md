@@ -15,6 +15,9 @@ A arquiquetura foi definida como:
 
 # Estrutura das pastas
 Dentro da pasta GCP_DataEngineering temos as pastas:
+### data_generator
+Pasta que guarda scripts que criam os arquivos clientes.json, 
+produtos_alpha.csv, produtos_beta.csv, vendas_alpha, vendas_beta.
 ### elt_script
 Esta pasta contém o script Python que carrega os dados para o bucket GCP, bem como carrega metadados[process_id;loaded_date;loaded_time;process_id;rows_count;from;to].
 O arquivo **auxiliar.py** contém as classes utilizadas. <br>

@@ -10,6 +10,7 @@ if __name__ == "__main__":
     context='case',
     frequency='daily').transfer()
     print("here ends the csv elt")
+    
     print("here starts the json elt")
     extract(
     arquitecture=['local_source','datalake'],
