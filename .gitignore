@@ -1,3 +1,5 @@
 case_env
 elt_script\.env
 elt_script/.env
+data_generator\__pycache__
+data_generator/__pycache__
