@@ -1,0 +1,22 @@
+sk_cliente;sk_produto;canal_venda;campanha;data_venda;quantidade;desconto
+3;106;instagram;24 horas pela metade do preço;2024-01-27;1;0.5
+75;105;instagram;compre dois e leve 1;2024-01-27;1;0.0
+98;105;site;24 horas pela metade do preço;2024-01-27;1;0.5
+63;104;instagram;24 horas pela metade do preço;2024-01-27;1;0.5
+82;100;site;compre dois e leve 1;2024-01-27;1;0.0
+51;101;instagram;24 horas pela metade do preço;2024-01-27;1;0.5
+41;100;instagram;24 horas pela metade do preço;2024-01-27;1;0.5
+74;106;site;24 horas pela metade do preço;2024-01-27;1;0.5
+41;107;instagram;24 horas pela metade do preço;2024-01-27;1;0.5
+65;103;site;compre dois e leve 1;2024-01-27;1;0.0
+40;102;instagram;compre dois e leve 1;2024-01-27;1;0.0
+35;107;instagram;compre dois e leve 1;2024-01-27;1;0.0
+9;100;instagram;24 horas pela metade do preço;2024-01-27;1;0.5
+6;103;instagram;compre dois e leve 1;2024-01-27;1;0.0
+11;107;instagram;compre dois e leve 1;2024-01-27;1;0.0
+6;105;instagram;24 horas pela metade do preço;2024-01-27;1;0.5
+32;100;instagram;compre dois e leve 1;2024-01-27;1;0.0
+44;100;site;compre dois e leve 1;2024-01-27;1;0.0
+50;103;instagram;24 horas pela metade do preço;2024-01-27;1;0.5
+12;108;instagram;24 horas pela metade do preço;2024-01-27;1;0.5
+31;102;instagram;24 horas pela metade do preço;2024-01-27;1;0.5

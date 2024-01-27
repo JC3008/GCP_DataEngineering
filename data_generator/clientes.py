@@ -15,14 +15,15 @@ genero_female = []
 lista_estados = ['RO','AC','AM','RR','PA','AP','TO','MA','PI','CE','RN','PB','PE',
     'AL','SE','BA','MG','ES','RJ','SP','PR','SC','RS','MS','MT','GO','DF']
 since = []
-numero_de_registros = 100
+numero_de_registros = 1000
 
 # lista_de_variaveis = ['ids','idades','nomes_male','genero_male',
 #                       'nomes_female','genero_female','lista_estados','since']
 
-
+n = 1
 while len(ids) < numero_de_registros:
-    ids.append(uuid.uuid4().hex[:8])
+    ids.append(n)
+    n+=1
     
 # criação das idades
 

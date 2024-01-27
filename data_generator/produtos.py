@@ -7,13 +7,15 @@ import json
 from datetime import date as dt
 import pandas as pd
 import numpy as np
+from variaveis import * 
 
-path = 'C:/Users/SALA443/Desktop/Estudos/GCP/GCP_DataEngineering/sources/csv/produtos.csv'
+path = f"{sources['local_csv']}produtos.csv"
+
 fk_presencial = [100,101,102,103,104]
 produtos_presencial = ['Java','Python','JavaScript','R','SQL-SERVER']
 precos_presencial = [3600,2600,2600,3700,4000]
 
-fk_ead = [200,201,202,203,204]
+fk_ead = [105,106,107,108,109]
 produtos_ead = ['Java','Python','JavaScript','R','SQL-SERVER']
 precos_ead = [1500,1800,1400,2000,3000]
 
