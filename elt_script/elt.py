@@ -8,7 +8,7 @@ if __name__ == "__main__":
     destination='landing',
     filename='empresa_alpha.csv',
     context='case',
-    frequency='daily').transfer()
+    frequency='daily').csv_to_gcp()
     print("here ends the csv elt")
     
     print("here starts the json elt")

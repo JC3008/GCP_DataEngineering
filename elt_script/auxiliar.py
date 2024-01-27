@@ -160,7 +160,7 @@ class extract:
         }        
         return vars
         
-    def transfer(self):
+    def csv_to_gcp(self):
         
         vars = extract(self.arquitecture,self.source,self.destination,self.filename,self.context,self.frequency).parameters
         
