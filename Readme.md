@@ -20,7 +20,7 @@ Pasta que guarda scripts que criam os arquivos clientes.json,
 produtos_alpha.csv, produtos_beta.csv, vendas_alpha, vendas_beta. <br>
 Clientes.py: gera uma base única de mil clientes que será usada para as duas empresas para fins de estudo. <br>
 Produtos.py: Gera um arquivo com os produtos vendidos pelas duas empresas <br>
-Vendas.py: Gera um arquivo com os dados das vendas de cada empresa, gerando dois arquivos (vendas_alpha, vendas_beta)
+Vendas.py: Gera os dados das vendas de cada empresa, gerando dois arquivos (vendas_alpha, vendas_beta)
 
 ### elt_script
 Esta pasta contém o script Python que carrega os dados para o bucket GCP, bem como carrega metadados[process_id;loaded_date;loaded_time;process_id;rows_count;from;to].
