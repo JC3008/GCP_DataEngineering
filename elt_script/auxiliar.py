@@ -109,7 +109,7 @@ class frequency():
 
  
 class extract:
-    def __init__(self, arquitecture:list,source:str, destination:str, filename:str, context:str, frequency:str ) -> None:
+    def __init__(self, arquitecture:list,source:str, destination:str, filename:list, context:str, frequency:str ) -> None:
          
          self.arquitecture = arquitecture
          self.source = source
@@ -135,7 +135,7 @@ class extract:
             'datalake':{
                 'landing':'landing-6638477',
                 'processed':'processed-6638477',
-                'consume':'processed-6638477'},
+                'consume':'consume-6638477'},
                         
             'data lakehouse':{
                 'bronze':'bronze-6638477',
@@ -324,8 +324,68 @@ class extract:
             return None
             
             
-
+            
+    def processed_to_consume(self):
+        vars = extract(
+            self.arquitecture,
+            self.source,
+            self.destination,
+            self.filename,
+            self.context,
+            self.frequency).parameters
         
+        storage_client =  storage.Client()
+        vars['gcp_destination']   
+        
+
+        alpha_vendas = pd.read_parquet(f"gs://{vars['gcp_source']}/{vars['subfolder']}/{vars['filename'][0]}.parquet")
+        beta_vendas = pd.read_parquet(f"gs://{vars['gcp_source']}/{vars['subfolder']}/{vars['filename'][1]}.parquet")
+        produtos = pd.read_parquet(f"gs://{vars['gcp_source']}/{vars['subfolder']}/{vars['filename'][2]}.parquet")
+        calendario = pd.read_parquet(f"gs://{vars['gcp_source']}/{vars['subfolder']}/{vars['filename'][3]}.parquet")
+        clientes = pd.read_parquet(f"gs://{vars['gcp_source']}/{vars['subfolder']}/{vars['filename'][4]}.parquet")
+        
+        vendas = pd.concat([alpha_vendas,beta_vendas])
+        
+        vendas_columns = ['sk_cliente','sk_produto','canal_venda','campanha','data_venda','quantidade','desconto']
+        vendas = vendas[vendas_columns]
+
+        produtos_columns = ['fk','curso','preco']
+        produtos = produtos[produtos_columns]
+
+        calendario_columns = ['Date','nome_dia','Month','Ano']
+        calendario = calendario[calendario_columns]
+
+        clientes_columns = ['registro','nome','genero','idade','estado','data_registro']
+        clientes = clientes[clientes_columns]
+
+        vendas = vendas.merge(clientes,left_on='sk_cliente',right_on='registro')
+
+        vendas.drop(['registro'], inplace=True, axis=1)
+
+        vendas = vendas.merge(produtos,left_on='sk_produto',right_on='fk')
+        vendas.drop(['fk'], inplace=True, axis=1)
+
+        vendas = vendas.merge(calendario,left_on='data_venda',right_on='Date')
+        vendas.drop(['Date'], inplace=True, axis=1)
+        
+        
+        destination_path = f"{vars['subfolder']}/vendas_obt.parquet"
+        bucket = storage_client.get_bucket(vars['gcp_destination'])  
+           
+
+        bucket.blob(destination_path).upload_from_string(vendas.to_parquet(), 'parquet')
+        
+        return None
+        
+        
+
+            
+
+
+           
+
+
+
 
 
 

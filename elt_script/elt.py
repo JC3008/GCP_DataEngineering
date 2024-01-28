@@ -62,6 +62,16 @@ def landing_para_processed_json():
     filename='clientes',
     context='case',
     frequency='daily').landing_to_processed_json()
+
+def carrega_obt_na_consume():
+    
+    extract(
+            arquitecture=['datalake','datalake'],
+            source='processed',
+            destination='consume',
+            filename=['vendas_alpha','vendas_beta','produtos','calendario','clientes'],
+            context='case',
+            frequency='daily').processed_to_consume()
     
     
 
@@ -72,5 +82,6 @@ if __name__ == "__main__":
     carregar_mongo_para_gcs()
     carrega_csv_da_landing_para_processed(['vendas_alpha','vendas_beta','produtos','calendario'])
     landing_para_processed_json()
+    carrega_obt_na_consume()
 
     
