@@ -14,10 +14,6 @@ import pymongo
 from tempfile import TemporaryDirectory
 import uuid
 
-
-
-
-
 # [begin] setting up variables
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS']="C:/Users/SALA443/Downloads/vendas-de-412318-2cdd56112d35.json"
@@ -330,6 +326,10 @@ class extract:
             
 
         
+
+
+
+    
 
 
 

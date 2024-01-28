@@ -1,9 +1,0 @@
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - <ipython-input-1-75463cca0766> - 2024-01-27 23:43:08,149
-Valid parameter *landing was set! -  input_check - <ipython-input-1-75463cca0766> - 2024-01-27 23:43:08,150
-The param *datalake was set in order to check if the *processed is a valid input. -  input_check - <ipython-input-1-75463cca0766> - 2024-01-27 23:43:08,150
-Valid parameter *processed was set! -  input_check - <ipython-input-1-75463cca0766> - 2024-01-27 23:43:08,150
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - <ipython-input-1-75463cca0766> - 2024-01-27 23:43:08,151
-Valid parameter *daily was set! -  input_check - <ipython-input-1-75463cca0766> - 2024-01-27 23:43:08,151
-Dataframe criado e metadados inseridos. -  landing_to_processed_json - <ipython-input-1-75463cca0766> - 2024-01-27 23:43:09,449
-File clientes containing 1000 rows was stored in 2024/01/27/case/clientes.parquet bucket! 
- The process_id is e12382991ca14e75. Please check the metadata file if you need more information about the pipeline -  landing_to_processed_json - <ipython-input-1-75463cca0766> - 2024-01-27 23:43:10,360
