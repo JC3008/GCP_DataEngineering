@@ -1,15 +1,9 @@
-The param *local_source was set in order to check if the *local_csv is a valid input. -  input_check - auxiliar.py - 2024-01-27 19:15:03,034
-Valid parameter *local_csv was set! -  input_check - auxiliar.py - 2024-01-27 19:15:03,034
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-27 19:15:03,035
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-27 19:15:03,035
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-27 19:15:03,036
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-27 19:15:03,037
-Dataframe criado e metadados inseridos. -  csv_to_gcp - auxiliar.py - 2024-01-27 19:15:03,041
-File empresa_alpha.csv containing 1 rows was stored in 2024/01/27/case/empresa_alpha.csv bucket! 
- The process_id is 5de12876b3dc47f2. Please check the metadata file if you need more information about the pipeline -  csv_to_gcp - auxiliar.py - 2024-01-27 19:15:04,074
-The param *local_source was set in order to check if the *local_json is a valid input. -  input_check - auxiliar.py - 2024-01-27 19:15:04,086
-Valid parameter *local_json was set! -  input_check - auxiliar.py - 2024-01-27 19:15:04,087
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-27 19:15:04,087
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-27 19:15:04,088
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-27 19:15:04,089
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-27 19:15:04,090
+The param *datalake was set in order to check if the *landing is a valid input. -  input_check - <ipython-input-1-75463cca0766> - 2024-01-27 23:43:08,149
+Valid parameter *landing was set! -  input_check - <ipython-input-1-75463cca0766> - 2024-01-27 23:43:08,150
+The param *datalake was set in order to check if the *processed is a valid input. -  input_check - <ipython-input-1-75463cca0766> - 2024-01-27 23:43:08,150
+Valid parameter *processed was set! -  input_check - <ipython-input-1-75463cca0766> - 2024-01-27 23:43:08,150
+The param *frequency was set in order to check if the *daily is a valid input. -  input_check - <ipython-input-1-75463cca0766> - 2024-01-27 23:43:08,151
+Valid parameter *daily was set! -  input_check - <ipython-input-1-75463cca0766> - 2024-01-27 23:43:08,151
+Dataframe criado e metadados inseridos. -  landing_to_processed_json - <ipython-input-1-75463cca0766> - 2024-01-27 23:43:09,449
+File clientes containing 1000 rows was stored in 2024/01/27/case/clientes.parquet bucket! 
+ The process_id is e12382991ca14e75. Please check the metadata file if you need more information about the pipeline -  landing_to_processed_json - <ipython-input-1-75463cca0766> - 2024-01-27 23:43:10,360

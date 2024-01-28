@@ -5,3 +5,5 @@ google-cloud-storage
 names==0.3.0
 pymongo==4.6.1 
 docker==7.0.0 
+fsspec==2023.12.2
+gcsfs==2023.12.2

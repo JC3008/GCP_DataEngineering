@@ -161,11 +161,11 @@ class extract:
         return vars
         
     def csv_to_gcp(self):
-        
         vars = extract(self.arquitecture,self.source,self.destination,self.filename,self.context,self.frequency).parameters
-        
-        # reading data and adding some metada fields        
-        df = pd.read_csv(f"{vars['source_path']}/{vars['filename']}",sep=';',encoding='utf-8')
+
+        # reading data and adding some metada fields    
+
+        df = pd.read_csv(f"{vars['source_path']}/{vars['filename']}.csv",sep=';',encoding='utf-8')
         df['loaded_date'] = dt.date.today().day
         df['loaded_time'] = current_time
         df['tags'] = tags['case']
@@ -185,11 +185,12 @@ class extract:
         
         # uploading to gcp
         # subfolder = vars['subfolder']
-                
+        
         storage_client =  storage.Client()
         bucket_name = vars['gcp_destination']
-        destination_path = f"{vars['subfolder']}/{vars['filename']}"
-        bucket = storage_client.get_bucket(bucket_name)        
+        destination_path = f"{vars['subfolder']}/{vars['filename']}.csv"
+        bucket = storage_client.get_bucket(bucket_name)          
+
         bucket.blob(destination_path).upload_from_string(df.to_csv(), 'text/csv')
         
         logging.info(f"File {vars['filename']} containing {len(df)} rows was stored in {destination_path} bucket! \n The process_id is {vars['process_id']}. Please check the metadata file if you need more information about the pipeline")
@@ -233,7 +234,14 @@ class extract:
     def mongo_to_gcp(self):
         
         client = pymongo.MongoClient("mongodb://localhost:27017/vendas")
-        vars = extract(self.arquitecture,self.source,self.destination,self.filename,self.context,self.frequency).parameters
+        vars = extract(
+            self.arquitecture,
+            self.source,
+            self.destination,
+            self.filename,
+            self.context,
+            self.frequency).parameters
+        
         # Database Name
         db = client["vendas"]
 
@@ -242,20 +250,93 @@ class extract:
 
         doc_list = []
         for doc in col.find({},{'_id':False}):
-            doc_list.append(json.dumps(doc))
+            doc_list.append(doc)
         doc_list = json.dumps(doc_list,indent=2)
         parsed = json.loads(doc_list)
         # print(parsed)
             
         storage_client =  storage.Client()
         bucket_name = vars['gcp_destination']
-        destination_path = f"{vars['subfolder']}/{vars['filename']}"
+        destination_path = f"{vars['subfolder']}/{vars['filename']}.json"
         bucket = storage_client.get_bucket(bucket_name)        
         bucket.blob(destination_path).upload_from_string(json.dumps(parsed,indent=2), 'json')
-                    
+    
+    
+    def landing_to_processed(self):
+        vars = extract(
+            self.arquitecture,
+            self.source,
+            self.destination,
+            self.filename,
+            self.context,
+            self.frequency).parameters
+        
+        storage_client =  storage.Client()
+        vars['gcp_destination']     
 
-                    
-                    
+        df = pd.read_csv(f"gs://{vars['gcp_source']}/{vars['subfolder']}/{vars['filename']}.csv")
+        df['loaded_date'] = dt.date.today().day
+        df['loaded_time'] = current_time
+        df['tags'] = tags['case']
+        df['process_id'] = vars['process_id'] 
+        df['rows_count'] = len(df)
+        df['from'] = self.source
+        df['to'] = self.destination
+        logging.info("Dataframe criado e metadados inseridos.")   
+  
+        destination_path = f"{vars['subfolder']}/{vars['filename']}.parquet"
+        bucket = storage_client.get_bucket(vars['gcp_destination'])  
+           
+
+        bucket.blob(destination_path).upload_from_string(df.to_parquet(), 'parquet')
+        
+        logging.info(f"File {vars['filename']} containing {len(df)} rows was stored in {destination_path} bucket! \n The process_id is {vars['process_id']}. Please check the metadata file if you need more information about the pipeline")
+        
+        return None
+    
+    def landing_to_processed_json(self):
+            vars = extract(
+            self.arquitecture,
+            self.source,
+            self.destination,
+            self.filename,
+            self.context,
+            self.frequency).parameters
+                
+            storage_client =  storage.Client()
+            vars['gcp_destination']  
+            
+            df = pd.read_json(f"gs://{vars['gcp_source']}/{vars['subfolder']}/{vars['filename']}.json") 
+            df['loaded_date'] = dt.date.today().day
+            df['loaded_time'] = current_time
+            df['tags'] = tags['case']
+            df['process_id'] = vars['process_id'] 
+            df['rows_count'] = len(df)
+            df['from'] = self.source
+            df['to'] = self.destination
+            
+            logging.info("Dataframe criado e metadados inseridos.")   
+  
+            destination_path = f"{vars['subfolder']}/{vars['filename']}.parquet"
+            bucket = storage_client.get_bucket(vars['gcp_destination'])  
+            
+
+            bucket.blob(destination_path).upload_from_string(df.to_parquet(index=None), 'parquet')
+            
+            logging.info(f"File {vars['filename']} containing {len(df)} rows was stored in {destination_path} bucket! \n The process_id is {vars['process_id']}. Please check the metadata file if you need more information about the pipeline")
+            
+            return None
+            
+            
+
+        
+
+
+
+
+
+
+  
 
             
 

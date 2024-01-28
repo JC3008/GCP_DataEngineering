@@ -51,14 +51,14 @@ docker ps ***para checar o id do container que está executando o mongo***
 
 **Para criar a coleção clientes dentro do database vendas**  <br>
 docker exec -it {container_id} mongosh
-docker exec -it a26fcec37dce6dd2354d4919aeef126915bc6688cb2351be93bbf0eb0ba7388d mongosh
+docker exec -it f2996a225d18a49f9a3e3eea3a00462328b37be086c64a46e99c159656dd15b5 mongosh
 use vendas
 db.createCollection("clientes")
 
 
 **para importar o clientes.json** <br>
 Clique CTRL+C CTRL+D para sair da execução do mongosh e execute conforme a seguir:
-docker exec -it a26fcec37dce6dd2354d4919aeef126915bc6688cb2351be93bbf0eb0ba7388d bash ***o container_id é informado assim que iniciada a execução em segundo plano***
+docker exec -it f2996a225d18a49f9a3e3eea3a00462328b37be086c64a46e99c159656dd15b5 bash ***o container_id é informado assim que iniciada a execução em segundo plano***
 mongoimport --db vendas --collection clientes --file clientes.json --jsonArray
 
 Após completar as etapas você verá uma imagem como abaixo, indicando que o arquivo clientes.json foi carregado na coleção clientes.
