@@ -1,101 +1,46 @@
-carregando o arquivo vendas_alpha para o GCS. -  carregar_csv - <ipython-input-1-e3f69ee072d3> - 2024-01-28 02:29:21,469
-The param *local_source was set in order to check if the *local_csv is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:21,470
-Valid parameter *local_csv was set! -  input_check - auxiliar.py - 2024-01-28 02:29:21,470
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:21,471
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 02:29:21,471
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:21,472
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 02:29:21,472
-Dataframe criado e metadados inseridos. -  csv_to_gcp - auxiliar.py - 2024-01-28 02:29:21,477
-File vendas_alpha containing 21 rows was stored in 2024/01/28/case/vendas_alpha.csv bucket! 
- The process_id is f65e3f1771e74016. Please check the metadata file if you need more information about the pipeline -  csv_to_gcp - auxiliar.py - 2024-01-28 02:29:22,494
-carregando o arquivo vendas_beta para o GCS. -  carregar_csv - <ipython-input-1-e3f69ee072d3> - 2024-01-28 02:29:22,494
-The param *local_source was set in order to check if the *local_csv is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:22,495
-Valid parameter *local_csv was set! -  input_check - auxiliar.py - 2024-01-28 02:29:22,496
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:22,496
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 02:29:22,497
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:22,497
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 02:29:22,498
-Dataframe criado e metadados inseridos. -  csv_to_gcp - auxiliar.py - 2024-01-28 02:29:22,503
-File vendas_beta containing 21 rows was stored in 2024/01/28/case/vendas_beta.csv bucket! 
- The process_id is 6d1861505d9e40d7. Please check the metadata file if you need more information about the pipeline -  csv_to_gcp - auxiliar.py - 2024-01-28 02:29:23,419
-carregando o arquivo produtos para o GCS. -  carregar_csv - <ipython-input-1-e3f69ee072d3> - 2024-01-28 02:29:23,420
-The param *local_source was set in order to check if the *local_csv is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:23,420
-Valid parameter *local_csv was set! -  input_check - auxiliar.py - 2024-01-28 02:29:23,421
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:23,421
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 02:29:23,422
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:23,423
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 02:29:23,423
-Dataframe criado e metadados inseridos. -  csv_to_gcp - auxiliar.py - 2024-01-28 02:29:23,427
+carregando o arquivo vendas_alpha para o GCS. -  carregar_csv - <ipython-input-1-e3f69ee072d3> - 2024-01-28 05:39:26,328
+The param *local_source was set in order to check if the *local_csv is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:26,329
+Valid parameter *local_csv was set! -  input_check - auxiliar.py - 2024-01-28 05:39:26,329
+The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:26,330
+Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 05:39:26,330
+The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:26,330
+Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 05:39:26,331
+Dataframe criado e metadados inseridos. -  csv_to_gcp - auxiliar.py - 2024-01-28 05:39:26,340
+File vendas_alpha containing 101 rows was stored in 2024/01/28/case/vendas_alpha.csv bucket! 
+ The process_id is 5ef196823ef64eaf. Please check the metadata file if you need more information about the pipeline -  csv_to_gcp - auxiliar.py - 2024-01-28 05:39:27,413
+carregando o arquivo vendas_beta para o GCS. -  carregar_csv - <ipython-input-1-e3f69ee072d3> - 2024-01-28 05:39:27,417
+The param *local_source was set in order to check if the *local_csv is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:27,420
+Valid parameter *local_csv was set! -  input_check - auxiliar.py - 2024-01-28 05:39:27,423
+The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:27,428
+Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 05:39:27,430
+The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:27,432
+Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 05:39:27,434
+Dataframe criado e metadados inseridos. -  csv_to_gcp - auxiliar.py - 2024-01-28 05:39:27,453
+File vendas_beta containing 101 rows was stored in 2024/01/28/case/vendas_beta.csv bucket! 
+ The process_id is 307434b88f184b18. Please check the metadata file if you need more information about the pipeline -  csv_to_gcp - auxiliar.py - 2024-01-28 05:39:28,413
+carregando o arquivo produtos para o GCS. -  carregar_csv - <ipython-input-1-e3f69ee072d3> - 2024-01-28 05:39:28,416
+The param *local_source was set in order to check if the *local_csv is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:28,420
+Valid parameter *local_csv was set! -  input_check - auxiliar.py - 2024-01-28 05:39:28,424
+The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:28,428
+Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 05:39:28,430
+The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:28,432
+Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 05:39:28,435
+Dataframe criado e metadados inseridos. -  csv_to_gcp - auxiliar.py - 2024-01-28 05:39:28,444
 File produtos containing 10 rows was stored in 2024/01/28/case/produtos.csv bucket! 
- The process_id is df1200e4d2d041cd. Please check the metadata file if you need more information about the pipeline -  csv_to_gcp - auxiliar.py - 2024-01-28 02:29:24,314
-carregando o arquivo calendario para o GCS. -  carregar_csv - <ipython-input-1-e3f69ee072d3> - 2024-01-28 02:29:24,316
-The param *local_source was set in order to check if the *local_csv is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:24,317
-Valid parameter *local_csv was set! -  input_check - auxiliar.py - 2024-01-28 02:29:24,319
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:24,320
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 02:29:24,321
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:24,321
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 02:29:24,322
-Dataframe criado e metadados inseridos. -  csv_to_gcp - auxiliar.py - 2024-01-28 02:29:24,331
+ The process_id is 995d3b111f70403e. Please check the metadata file if you need more information about the pipeline -  csv_to_gcp - auxiliar.py - 2024-01-28 05:39:29,378
+carregando o arquivo calendario para o GCS. -  carregar_csv - <ipython-input-1-e3f69ee072d3> - 2024-01-28 05:39:29,379
+The param *local_source was set in order to check if the *local_csv is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:29,380
+Valid parameter *local_csv was set! -  input_check - auxiliar.py - 2024-01-28 05:39:29,380
+The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:29,381
+Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 05:39:29,382
+The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:29,383
+Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 05:39:29,384
+Dataframe criado e metadados inseridos. -  csv_to_gcp - auxiliar.py - 2024-01-28 05:39:29,394
 File calendario containing 180 rows was stored in 2024/01/28/case/calendario.csv bucket! 
- The process_id is f95d479764ff49ec. Please check the metadata file if you need more information about the pipeline -  csv_to_gcp - auxiliar.py - 2024-01-28 02:29:25,249
-The param *local_source was set in order to check if the *local_json is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:25,257
-Valid parameter *local_json was set! -  input_check - auxiliar.py - 2024-01-28 02:29:25,259
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:25,260
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 02:29:25,261
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:25,263
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 02:29:25,263
-carregando o arquivo vendas_alpha para o GCS. -  carrega_csv_da_landing_para_processed - <ipython-input-1-e3f69ee072d3> - 2024-01-28 02:29:26,503
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:26,503
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 02:29:26,504
-The param *datalake was set in order to check if the *processed is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:26,505
-Valid parameter *processed was set! -  input_check - auxiliar.py - 2024-01-28 02:29:26,505
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:26,506
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 02:29:26,507
-Dataframe criado e metadados inseridos. -  landing_to_processed - auxiliar.py - 2024-01-28 02:29:27,467
-File vendas_alpha containing 21 rows was stored in 2024/01/28/case/vendas_alpha.parquet bucket! 
- The process_id is 61baa99832a5417f. Please check the metadata file if you need more information about the pipeline -  landing_to_processed - auxiliar.py - 2024-01-28 02:29:28,342
-carregando o arquivo vendas_beta para o GCS. -  carrega_csv_da_landing_para_processed - <ipython-input-1-e3f69ee072d3> - 2024-01-28 02:29:28,342
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:28,343
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 02:29:28,343
-The param *datalake was set in order to check if the *processed is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:28,344
-Valid parameter *processed was set! -  input_check - auxiliar.py - 2024-01-28 02:29:28,345
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:28,346
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 02:29:28,347
-Dataframe criado e metadados inseridos. -  landing_to_processed - auxiliar.py - 2024-01-28 02:29:28,728
-File vendas_beta containing 21 rows was stored in 2024/01/28/case/vendas_beta.parquet bucket! 
- The process_id is 4bca09e7424f4370. Please check the metadata file if you need more information about the pipeline -  landing_to_processed - auxiliar.py - 2024-01-28 02:29:29,575
-carregando o arquivo produtos para o GCS. -  carrega_csv_da_landing_para_processed - <ipython-input-1-e3f69ee072d3> - 2024-01-28 02:29:29,575
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:29,576
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 02:29:29,577
-The param *datalake was set in order to check if the *processed is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:29,578
-Valid parameter *processed was set! -  input_check - auxiliar.py - 2024-01-28 02:29:29,578
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:29,578
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 02:29:29,579
-Dataframe criado e metadados inseridos. -  landing_to_processed - auxiliar.py - 2024-01-28 02:29:29,972
-File produtos containing 10 rows was stored in 2024/01/28/case/produtos.parquet bucket! 
- The process_id is c27f88dbcad249b3. Please check the metadata file if you need more information about the pipeline -  landing_to_processed - auxiliar.py - 2024-01-28 02:29:30,810
-carregando o arquivo calendario para o GCS. -  carrega_csv_da_landing_para_processed - <ipython-input-1-e3f69ee072d3> - 2024-01-28 02:29:30,813
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:30,817
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 02:29:30,820
-The param *datalake was set in order to check if the *processed is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:30,824
-Valid parameter *processed was set! -  input_check - auxiliar.py - 2024-01-28 02:29:30,826
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:30,828
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 02:29:30,830
-Dataframe criado e metadados inseridos. -  landing_to_processed - auxiliar.py - 2024-01-28 02:29:31,229
-File calendario containing 180 rows was stored in 2024/01/28/case/calendario.parquet bucket! 
- The process_id is bd4ef6054dc649b5. Please check the metadata file if you need more information about the pipeline -  landing_to_processed - auxiliar.py - 2024-01-28 02:29:32,029
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:32,032
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 02:29:32,034
-The param *datalake was set in order to check if the *processed is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:32,035
-Valid parameter *processed was set! -  input_check - auxiliar.py - 2024-01-28 02:29:32,037
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:32,038
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 02:29:32,040
-Dataframe criado e metadados inseridos. -  landing_to_processed_json - auxiliar.py - 2024-01-28 02:29:32,682
-File clientes containing 1000 rows was stored in 2024/01/28/case/clientes.parquet bucket! 
- The process_id is 03043e494c9c47be. Please check the metadata file if you need more information about the pipeline -  landing_to_processed_json - auxiliar.py - 2024-01-28 02:29:33,640
-The param *datalake was set in order to check if the *processed is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:33,641
-Valid parameter *processed was set! -  input_check - auxiliar.py - 2024-01-28 02:29:33,641
-The param *datalake was set in order to check if the *consume is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:33,642
-Valid parameter *consume was set! -  input_check - auxiliar.py - 2024-01-28 02:29:33,643
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 02:29:33,643
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 02:29:33,644
+ The process_id is 6ab931d8ec6e4503. Please check the metadata file if you need more information about the pipeline -  csv_to_gcp - auxiliar.py - 2024-01-28 05:39:30,318
+The param *local_source was set in order to check if the *local_json is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:30,333
+Valid parameter *local_json was set! -  input_check - auxiliar.py - 2024-01-28 05:39:30,334
+The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:30,335
+Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 05:39:30,336
+The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:30,337
+Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 05:39:30,338

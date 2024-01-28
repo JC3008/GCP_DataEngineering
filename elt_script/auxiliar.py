@@ -14,6 +14,7 @@ import pymongo
 from tempfile import TemporaryDirectory
 import uuid
 
+
 # [begin] setting up variables
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS']="C:/Users/SALA443/Downloads/vendas-de-412318-2cdd56112d35.json"
@@ -344,10 +345,16 @@ class extract:
         calendario = pd.read_parquet(f"gs://{vars['gcp_source']}/{vars['subfolder']}/{vars['filename'][3]}.parquet")
         clientes = pd.read_parquet(f"gs://{vars['gcp_source']}/{vars['subfolder']}/{vars['filename'][4]}.parquet")
         
+        alpha_vendas['empresa'] = 'Alpha'
+        beta_vendas['empresa'] = 'Beta'
+        
+        
         vendas = pd.concat([alpha_vendas,beta_vendas])
         
-        vendas_columns = ['sk_cliente','sk_produto','canal_venda','campanha','data_venda','quantidade','desconto']
+        vendas_columns = ['sk_cliente','sk_produto','canal_venda','campanha','data_venda','quantidade','desconto','empresa']
         vendas = vendas[vendas_columns]
+        
+        
 
         produtos_columns = ['fk','curso','preco']
         produtos = produtos[produtos_columns]
@@ -366,8 +373,7 @@ class extract:
         vendas.drop(['fk'], inplace=True, axis=1)
 
         vendas = vendas.merge(calendario,left_on='data_venda',right_on='Date')
-        vendas.drop(['Date'], inplace=True, axis=1)
-        
+        vendas.drop(['Date'], inplace=True, axis=1)     
         
         destination_path = f"{vars['subfolder']}/vendas_obt.parquet"
         bucket = storage_client.get_bucket(vars['gcp_destination'])  

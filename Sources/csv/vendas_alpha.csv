@@ -1,22 +1,102 @@
-sk_cliente;sk_produto;canal_venda;campanha;data_venda;quantidade;desconto
-27;107;instagram;compre dois e leve 1;2024-01-27;1;0.0
-58;100;site;compre dois e leve 1;2024-01-27;1;0.0
-55;106;instagram;compre dois e leve 1;2024-01-27;1;0.0
-43;102;instagram;compre dois e leve 1;2024-01-27;1;0.0
-53;104;site;24 horas pela metade do preço;2024-01-27;1;0.5
-61;102;site;compre dois e leve 1;2024-01-27;1;0.0
-55;105;site;24 horas pela metade do preço;2024-01-27;1;0.5
-99;107;site;24 horas pela metade do preço;2024-01-27;1;0.5
-9;100;instagram;compre dois e leve 1;2024-01-27;1;0.0
-49;104;site;compre dois e leve 1;2024-01-27;1;0.0
-81;102;site;compre dois e leve 1;2024-01-27;1;0.0
-23;103;instagram;24 horas pela metade do preço;2024-01-27;1;0.5
-51;100;instagram;24 horas pela metade do preço;2024-01-27;1;0.5
-72;101;site;compre dois e leve 1;2024-01-27;1;0.0
-71;108;site;24 horas pela metade do preço;2024-01-27;1;0.5
-91;108;site;24 horas pela metade do preço;2024-01-27;1;0.5
-59;103;site;compre dois e leve 1;2024-01-27;1;0.0
-69;106;instagram;24 horas pela metade do preço;2024-01-27;1;0.5
-62;102;site;compre dois e leve 1;2024-01-27;1;0.0
-91;104;site;compre dois e leve 1;2024-01-27;1;0.0
-76;103;site;24 horas pela metade do preço;2024-01-27;1;0.5
+id_venda;sk_cliente;sk_produto;canal_venda;campanha;data_venda;quantidade;desconto
+1;19;108;loja;24 horas pela metade do preço;2024-01-28;1;0.5
+2;58;107;instagram;sem campanha;2024-01-28;1;0.0
+3;21;104;loja;compre dois e leve 3;2024-01-28;2;0.0
+4;58;102;loja;sem campanha;2024-01-28;1;0.0
+5;63;105;instagram;sem campanha;2024-01-28;1;0.0
+6;62;103;instagram;sem campanha;2024-01-28;1;0.0
+7;63;104;loja;24 horas pela metade do preço;2024-01-28;1;0.5
+8;19;100;site;compre dois e leve 3;2024-01-28;2;0.0
+9;27;101;loja;sem campanha;2024-01-28;1;0.0
+10;66;103;loja;compre dois e leve 3;2024-01-28;2;0.0
+11;98;108;instagram;sem campanha;2024-01-28;1;0.0
+12;82;106;loja;24 horas pela metade do preço;2024-01-28;1;0.5
+13;66;101;site;sem campanha;2024-01-28;1;0.0
+14;21;101;loja;sem campanha;2024-01-28;1;0.0
+15;20;101;loja;24 horas pela metade do preço;2024-01-28;1;0.5
+16;5;106;loja;24 horas pela metade do preço;2024-01-28;1;0.5
+17;33;101;loja;sem campanha;2024-01-28;1;0.0
+18;15;108;loja;compre dois e leve 3;2024-01-28;2;0.0
+19;16;105;instagram;compre dois e leve 3;2024-01-28;2;0.0
+20;73;105;loja;sem campanha;2024-01-28;1;0.0
+21;79;107;site;compre dois e leve 3;2024-01-28;2;0.0
+22;51;104;loja;sem campanha;2024-01-28;1;0.0
+23;33;105;instagram;sem campanha;2024-01-28;1;0.0
+24;71;101;instagram;sem campanha;2024-01-28;1;0.0
+25;13;101;loja;compre dois e leve 3;2024-01-28;2;0.0
+26;19;101;loja;compre dois e leve 3;2024-01-28;2;0.0
+27;18;104;loja;24 horas pela metade do preço;2024-01-28;1;0.5
+28;84;103;loja;compre dois e leve 3;2024-01-28;2;0.0
+29;6;108;loja;24 horas pela metade do preço;2024-01-28;1;0.5
+30;93;102;instagram;sem campanha;2024-01-28;1;0.0
+31;22;105;site;compre dois e leve 3;2024-01-28;2;0.0
+32;68;108;instagram;sem campanha;2024-01-28;1;0.0
+33;35;104;loja;24 horas pela metade do preço;2024-01-28;1;0.5
+34;49;101;loja;24 horas pela metade do preço;2024-01-28;1;0.5
+35;42;104;instagram;compre dois e leve 3;2024-01-28;2;0.0
+36;12;107;instagram;sem campanha;2024-01-28;1;0.0
+37;40;107;site;sem campanha;2024-01-28;1;0.0
+38;7;108;site;sem campanha;2024-01-28;1;0.0
+39;6;104;loja;compre dois e leve 3;2024-01-28;2;0.0
+40;9;105;loja;sem campanha;2024-01-28;1;0.0
+41;80;105;loja;24 horas pela metade do preço;2024-01-28;1;0.5
+42;86;101;site;compre dois e leve 3;2024-01-28;2;0.0
+43;35;105;loja;compre dois e leve 3;2024-01-28;2;0.0
+44;70;108;loja;24 horas pela metade do preço;2024-01-28;1;0.5
+45;68;107;site;sem campanha;2024-01-28;1;0.0
+46;22;108;instagram;sem campanha;2024-01-28;1;0.0
+47;9;104;site;sem campanha;2024-01-28;1;0.0
+48;88;101;instagram;24 horas pela metade do preço;2024-01-28;1;0.5
+49;37;107;site;sem campanha;2024-01-28;1;0.0
+50;55;103;site;sem campanha;2024-01-28;1;0.0
+51;83;101;site;sem campanha;2024-01-28;1;0.0
+52;76;107;site;sem campanha;2024-01-28;1;0.0
+53;40;108;loja;compre dois e leve 3;2024-01-28;2;0.0
+54;71;105;loja;sem campanha;2024-01-28;1;0.0
+55;64;102;loja;24 horas pela metade do preço;2024-01-28;1;0.5
+56;80;107;instagram;24 horas pela metade do preço;2024-01-28;1;0.5
+57;26;103;instagram;24 horas pela metade do preço;2024-01-28;1;0.5
+58;28;104;instagram;sem campanha;2024-01-28;1;0.0
+59;97;104;loja;compre dois e leve 3;2024-01-28;2;0.0
+60;66;102;site;compre dois e leve 3;2024-01-28;2;0.0
+61;7;101;loja;sem campanha;2024-01-28;1;0.0
+62;99;101;site;compre dois e leve 3;2024-01-28;2;0.0
+63;61;108;loja;sem campanha;2024-01-28;1;0.0
+64;11;101;site;sem campanha;2024-01-28;1;0.0
+65;6;106;loja;compre dois e leve 3;2024-01-28;2;0.0
+66;32;104;site;sem campanha;2024-01-28;1;0.0
+67;25;100;site;24 horas pela metade do preço;2024-01-28;1;0.5
+68;14;103;instagram;24 horas pela metade do preço;2024-01-28;1;0.5
+69;18;102;loja;compre dois e leve 3;2024-01-28;2;0.0
+70;51;101;site;sem campanha;2024-01-28;1;0.0
+71;54;103;site;sem campanha;2024-01-28;1;0.0
+72;55;106;site;compre dois e leve 3;2024-01-28;2;0.0
+73;29;106;instagram;compre dois e leve 3;2024-01-28;2;0.0
+74;4;108;instagram;24 horas pela metade do preço;2024-01-28;1;0.5
+75;9;106;site;sem campanha;2024-01-28;1;0.0
+76;92;102;instagram;sem campanha;2024-01-28;1;0.0
+77;24;102;loja;24 horas pela metade do preço;2024-01-28;1;0.5
+78;85;108;loja;sem campanha;2024-01-28;1;0.0
+79;95;101;loja;sem campanha;2024-01-28;1;0.0
+80;54;105;loja;sem campanha;2024-01-28;1;0.0
+81;29;108;loja;24 horas pela metade do preço;2024-01-28;1;0.5
+82;54;104;loja;24 horas pela metade do preço;2024-01-28;1;0.5
+83;41;103;loja;sem campanha;2024-01-28;1;0.0
+84;78;105;instagram;sem campanha;2024-01-28;1;0.0
+85;96;104;loja;compre dois e leve 3;2024-01-28;2;0.0
+86;39;102;instagram;sem campanha;2024-01-28;1;0.0
+87;51;101;loja;sem campanha;2024-01-28;1;0.0
+88;24;106;loja;24 horas pela metade do preço;2024-01-28;1;0.5
+89;60;102;loja;24 horas pela metade do preço;2024-01-28;1;0.5
+90;86;108;instagram;sem campanha;2024-01-28;1;0.0
+91;4;100;loja;compre dois e leve 3;2024-01-28;2;0.0
+92;79;100;instagram;compre dois e leve 3;2024-01-28;2;0.0
+93;15;106;instagram;sem campanha;2024-01-28;1;0.0
+94;30;106;instagram;24 horas pela metade do preço;2024-01-28;1;0.5
+95;5;103;loja;sem campanha;2024-01-28;1;0.0
+96;7;101;instagram;sem campanha;2024-01-28;1;0.0
+97;63;100;site;compre dois e leve 3;2024-01-28;2;0.0
+98;98;108;loja;sem campanha;2024-01-28;1;0.0
+99;52;102;loja;sem campanha;2024-01-28;1;0.0
+100;21;108;site;sem campanha;2024-01-28;1;0.0
+101;89;106;loja;24 horas pela metade do preço;2024-01-28;1;0.5
