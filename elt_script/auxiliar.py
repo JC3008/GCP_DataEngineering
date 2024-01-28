@@ -1,5 +1,5 @@
-import sys
-sys.path.append(r'C:\Users\SALA443\Desktop\Estudos\GCP\case_env\Lib\site-packages')
+# import sys
+# sys.path.append(r'C:\Users\SALA443\Desktop\Estudos\GCP\case_env\Lib\site-packages')
 
 import datetime as dt
 from datetime import datetime,date,time
@@ -17,8 +17,11 @@ import uuid
 
 # [begin] setting up variables
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS']="C:/Users/SALA443/Downloads/vendas-de-412318-2cdd56112d35.json"
+# dotenv_path = Path(r'/workspaces/app/.env')
+# load_dotenv(dotenv_path=dotenv_path)
 
+# os.environ['GOOGLE_APPLICATION_CREDENTIALS']="C:/Users/SALA443/Downloads/vendas-de-412318-2cdd56112d35.json"
+os.environ['GOOGLE_APPLICATION_CREDENTIALS']="/workspaces/app/elt_script/vendas-de-412318-2cdd56112d35.json"
 logging.basicConfig(
     
         level=logging.INFO,
@@ -130,8 +133,8 @@ class extract:
             'local_source':{
             'local_csv':'C:/Users/SALA443/Desktop/Estudos/GCP/GCP_DataEngineering/sources/csv',
             'local_json':'C:/Users/SALA443/Desktop/Estudos/GCP/GCP_DataEngineering/sources/mongo/',
-            'container_csv':'workspaces/opt/sources',
-            'container_json':'workspaces/opt/sources'},
+            'container_csv':'/workspaces/app/sources/csv',
+            'container_json':'/workspaces/app/sources/mongo'},
             
             'datalake':{
                 'landing':'landing-6638477',

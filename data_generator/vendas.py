@@ -16,7 +16,7 @@ id_venda = 0
 data_vendas = dt.today()
 sk_cliente = random.randrange(1, 1000)
 sk_produto = random.randrange(100, 109)
-canal_venda = ['site','instagram','loja','loja','loja']
+canal_venda = ['site','instagram','loja','whatsapp','loja']
 campanha = ['24 horas pela metade do preço','compre dois e leve 3','sem campanha','sem campanha','sem campanha']
 
 col_cliente = []
@@ -52,7 +52,7 @@ def salva_arquivo(nome_arquivo:str):
     df['quantidade'] = np.where(df['campanha']=='compre dois e leve 3', 2, 1)
     df['desconto'] = np.where(df['campanha']=='24 horas pela metade do preço', 0.5, 0)
 
-    df.to_csv(f"{sources['local_csv']}{nome_arquivo}",sep=';',encoding='utf-8',index=None)
+    df.to_csv(f"{sources['container_csv']}{nome_arquivo}",sep=';',encoding='utf-8',index=None)
     
 
 

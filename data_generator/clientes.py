@@ -1,5 +1,5 @@
-import sys
-sys.path.append(r'C:\Users\SALA443\Desktop\Estudos\GCP\case_env\Lib\site-packages')
+# import sys
+# sys.path.append(r'C:\Users\SALA443\Desktop\Estudos\GCP\case_env\Lib\site-packages')
 import names
 import random
 import uuid
@@ -12,8 +12,11 @@ nomes_male = []
 genero_male = []
 nomes_female = []
 genero_female = [] 
-lista_estados = ['RO','AC','AM','RR','PA','AP','TO','MA','PI','CE','RN','PB','PE',
-    'AL','SE','BA','MG','ES','RJ','SP','PR','SC','RS','MS','MT','GO','DF']
+lista_estados = ['Rondonia','Acre','Amazonas','Roraima','Para','Amapa','Tocantins',
+                'Maranão','Piaui','Ceará','Rio Grande do Norte','Paraiba','Pernambuco',
+                'Alagoas','Sergipe','Bahia','Minas Gerais','Espirito Santo','Rio de Janeiro',
+                'São Paulo','Parana','Santa Catarina','Rio Grande do Sul','Mato Grosso do Sul',
+                'Mato Grosso','Goias','Distrito Federal']
 since = []
 numero_de_registros = 1000
 
@@ -72,5 +75,5 @@ for n in range(numero_de_registros):
 file = json.dumps(data)
 
 
-with open("C:/Users/SALA443/Desktop/Estudos/GCP/GCP_DataEngineering/sources/mongo/clientes.json", "w") as arquivo:
+with open("/workspaces/app/sources/mongo/clientes.json", "w") as arquivo:
     arquivo.write(file)

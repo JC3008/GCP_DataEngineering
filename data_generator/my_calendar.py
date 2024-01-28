@@ -1,6 +1,6 @@
-from variaveis import * 
-import sys
-sys.path.append(sources['virtualenv'])
+# from variaveis import * 
+# import sys
+# sys.path.append(sources['virtualenv'])
 from datetime import *
 import pandas as pd
 
@@ -27,4 +27,4 @@ for d in range(len(df['Date'])):
     df['fk'][d] = n
     n += 1    
 
-df.to_csv(f"{sources['local_csv']}calendario.csv",sep=';',encoding='utf-8',index=None)
+df.to_csv(f"{sources['container_csv']}calendario.csv",sep=';',encoding='utf-8',index=None)

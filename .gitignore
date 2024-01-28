@@ -1,5 +1,9 @@
 case_env
 elt_script\.env
 elt_script/.env
+elt_script\__pycache__
+elt_script/__pycache__
 data_generator\__pycache__
 data_generator/__pycache__
+GCP_DataEngineering/elt_script/vendas-de-412318-2cdd56112d35.json
+GCP_DataEngineering\elt_script\vendas-de-412318-2cdd56112d35.json
