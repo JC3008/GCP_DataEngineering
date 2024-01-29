@@ -69,7 +69,7 @@ Para checar a coleção, abra mais um terminal e execute:
 * use vendas
 * db.clientes.find({})
 
-* Looker
+# Looker
 ![Alt text](imagens/looker.png)
 
 
