@@ -1,6 +1,6 @@
 # Resumo do projeto
 Nome do projeto no GCP: **Vendas-De**
-Este projeto visa a criação de um projeto de engenharia de dados para analisar dados comerciais de duas empresas fictícias.
+Este projeto visa a criação de um projeto de engenharia de dados para analisar dados comerciais de duas empresas fictícias. Essas duas empresas (Alpha e Beta) vendem cursos na área de teconologia, e atuam no brasil todo, nas modalidades presencial e ead. Objetivo desse projeto é criar todo o pipeline de dados, desde a ingestão até a disponibilização.
 
 # Arquitetura
 ![Alt text](imagens/arquitetura.png)
