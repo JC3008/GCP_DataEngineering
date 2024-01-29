@@ -1,5 +1,6 @@
-# import sys
-# sys.path.append(r'C:\Users\SALA443\Desktop\Estudos\GCP\case_env\Lib\site-packages')
+from variaveis import *
+import sys
+sys.path.append(sources['virtualenv'])
 import names
 import random
 import uuid
@@ -9,7 +10,6 @@ import pandas as pd
 import numpy as np
 from variaveis import * 
 
-path = f"{sources['container_csv']}produtos.csv"
 
 fk_presencial = [100,101,102,103,104]
 produtos_presencial = ['Java','Python','JavaScript','R','SQL-SERVER','Bootcamp Especialista em dados']
@@ -28,4 +28,4 @@ numero_de_registros = len(fk)
 df = pd.DataFrame(list(zip(fk, produtos, precos)),
             columns =['fk', 'curso','preco'])
 
-df.to_csv(path,index=None,sep=';',encoding='utf-8')
+df.to_csv(f"{sources['local_csv']}produtos.csv",index=None,sep=';',encoding='utf-8')

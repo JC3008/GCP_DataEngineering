@@ -1,53 +1,52 @@
-CREATE VIEW vendas_obt.analise_receita AS 
-WITH 
--- Inserindo um surrogate key na tabela
-sk as (
+CREATE OR REPLACE TABLE vendas-de-412318.vendas_obt.analise_janeiro AS
+
+WITH insere_sk_e_receita AS (
 SELECT 
-ROW_NUMBER() OVER (ORDER BY data_venda) as sk_venda,
-* 
-FROM `vendas-de-412318.vendas_obt.vendas_obt`
+ROW_NUMBER() OVER (ORDER BY v.data_venda) AS sk_venda,
 
+v.empresa,
+v.estado,
+v.idade,
+v.curso,
+v.canal_venda,
+v.campanha,
+v.data_venda,
+v.quantidade * v.preco * (1 - v.desconto) as receita,
+v.quantidade
+
+FROM `vendas-de-412318.vendas_obt.vendas_janeiro` v
 ),
--- Receita por empresa
-vendas_total as (
-  SELECT 
-  sk_venda,
-  data_venda,
-  empresa,
-  SUM(preco * desconto) OVER(PARTITION BY empresa) as receita_por_empresa
-  FROM sk
-),
 
--- Percentual sobre receita clusterizado
-percentual_sobre_total as (
-  SELECT 
-  v.sk_venda,
-  v.data_venda,
-  v.empresa,
-  vt.receita_por_empresa,
-  SUM(preco) OVER (PARTITION BY estado,v.empresa ) / vt.receita_por_empresa as percentual_receita_uf_sobre_total,
-  SUM(preco) OVER (PARTITION BY canal_venda,v.empresa ) / vt.receita_por_empresa as percentual_receita_canal_venda_sobre_total,
-  SUM(preco) OVER (PARTITION BY v.empresa,v.campanha ) / vt.receita_por_empresa as percentual_receita_campanha_sobre_total,
-  SUM(quantidade) OVER (PARTITION BY genero,v.empresa,v.campanha ) as quantidade_vendida_genero_campanha
+receita_clusters AS (
 
-  FROM sk as v
-  LEFT JOIN vendas_total as vt
-  ON v.sk_venda = vt.sk_venda
+SELECT 
+data_venda,
+empresa,
+quantidade,
+SUM(receita) OVER (PARTITION BY empresa) as receita_empresa,
+SUM(receita) OVER (PARTITION BY empresa, estado) as receita_estado,
+SUM(receita) OVER (PARTITION BY estado, campanha, canal_venda) as receita_estado_campanha_canal,
+receita,
+estado,
+campanha,
+canal_venda,
+curso
+FROM insere_sk_e_receita
 )
 
--- obt enriquecida
-SELECT  
-vendas.*,
-pt.receita_por_empresa,
-pt.percentual_receita_uf_sobre_total,
-pt.percentual_receita_canal_venda_sobre_total,
-pt.percentual_receita_campanha_sobre_total,
-pt.quantidade_vendida_genero_campanha
+SELECT 
+data_venda,
+empresa,
+estado,
+campanha,
+canal_venda,
+quantidade,
+curso,
+receita_empresa,
+receita_estado,
+receita_estado_campanha_canal,
+receita
 
-FROM sk as vendas
-LEFT JOIN percentual_sobre_total as pt 
-ON vendas.sk_venda = pt.sk_venda
+FROM receita_clusters
 
-
-
-
+ORDER By estado,campanha,canal_venda

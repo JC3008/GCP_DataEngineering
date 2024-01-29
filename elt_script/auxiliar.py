@@ -1,9 +1,8 @@
-# import sys
-# sys.path.append(r'C:\Users\SALA443\Desktop\Estudos\GCP\case_env\Lib\site-packages')
+import sys
+sys.path.append(r'C:\Users\SALA443\Desktop\Estudos\GCP\case_env\Lib\site-packages')
 
 import datetime as dt
 from datetime import datetime,date,time
-from dotenv import load_dotenv
 from google.cloud import storage
 import logging
 import json
@@ -20,8 +19,8 @@ import uuid
 # dotenv_path = Path(r'/workspaces/app/.env')
 # load_dotenv(dotenv_path=dotenv_path)
 
-# os.environ['GOOGLE_APPLICATION_CREDENTIALS']="C:/Users/SALA443/Downloads/vendas-de-412318-2cdd56112d35.json"
-os.environ['GOOGLE_APPLICATION_CREDENTIALS']="/workspaces/app/elt_script/vendas-de-412318-2cdd56112d35.json"
+os.environ['GOOGLE_APPLICATION_CREDENTIALS']="C:/Users/SALA443/Desktop/Estudos/GCP/GCP_DataEngineering/elt_script/vendas-de-412318-2cdd56112d35.json"
+# os.environ['GOOGLE_APPLICATION_CREDENTIALS']="/workspaces/app/elt_script/vendas-de-412318-2cdd56112d35.json"
 logging.basicConfig(
     
         level=logging.INFO,
@@ -71,7 +70,8 @@ def input_check(input, param):
         logging.error(" Please type a valid frequency like (daily, hourly ou monthly)")
         raise ValueError("Invalid parameter was passed!!")
     else:
-        logging.info(f"Valid parameter *{input} was set!")      
+        logging.info(f"Valid parameter *{input} was set!") 
+        return None     
 # [end] Function developed to validate parameters inserted in class methods        
 
 
@@ -233,6 +233,8 @@ class extract:
 
     def mongo_to_gcp(self):
         
+        logging.info("Mongodb - Extraction has begun!")
+        
         client = pymongo.MongoClient("mongodb://localhost:27017/vendas")
         vars = extract(
             self.arquitecture,
@@ -254,14 +256,16 @@ class extract:
         doc_list = json.dumps(doc_list,indent=2)
         parsed = json.loads(doc_list)
         # print(parsed)
-            
+        
+        logging.info(f"Mongodb - {len(parsed)} documents was encountered.")    
         storage_client =  storage.Client()
         bucket_name = vars['gcp_destination']
         destination_path = f"{vars['subfolder']}/{vars['filename']}.json"
         bucket = storage_client.get_bucket(bucket_name)        
         bucket.blob(destination_path).upload_from_string(json.dumps(parsed,indent=2), 'json')
-    
-    
+        logging.info(f"Mongodb - {len(parsed)} documents was stored in GCS as a json file called {vars['filename']}") 
+        return None
+
     def landing_to_processed(self):
         vars = extract(
             self.arquitecture,

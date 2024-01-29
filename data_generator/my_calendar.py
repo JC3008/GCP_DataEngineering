@@ -1,6 +1,6 @@
-# from variaveis import * 
-# import sys
-# sys.path.append(sources['virtualenv'])
+from variaveis import * 
+import sys
+sys.path.append(sources['virtualenv'])
 from datetime import *
 import pandas as pd
 
@@ -11,8 +11,8 @@ num_dia = [0,1,2,3,4,5,6]
 
 df_dias = pd.DataFrame(list(zip(nome_dia,num_dia)),columns =['nome_dia', 'num_dia'])
 
-start='2023-08-01' 
-end='2024-01-27'
+start='2023-01-01' 
+end='2024-01-31'
 df = pd.DataFrame({"Date": pd.date_range(start, end)})
 df["day_name"] = df['Date'].dt.day_name()
 df["Numero_do_dia"] = df['Date'].dt.weekday
@@ -27,4 +27,4 @@ for d in range(len(df['Date'])):
     df['fk'][d] = n
     n += 1    
 
-df.to_csv(f"{sources['container_csv']}calendario.csv",sep=';',encoding='utf-8',index=None)
+df.to_csv(f"{sources['local_csv']}calendario.csv",sep=';',encoding='utf-8',index=None)

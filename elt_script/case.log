@@ -1,46 +1,8 @@
-carregando o arquivo vendas_alpha para o GCS. -  carregar_csv - <ipython-input-1-e3f69ee072d3> - 2024-01-28 05:39:26,328
-The param *local_source was set in order to check if the *local_csv is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:26,329
-Valid parameter *local_csv was set! -  input_check - auxiliar.py - 2024-01-28 05:39:26,329
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:26,330
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 05:39:26,330
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:26,330
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 05:39:26,331
-Dataframe criado e metadados inseridos. -  csv_to_gcp - auxiliar.py - 2024-01-28 05:39:26,340
-File vendas_alpha containing 101 rows was stored in 2024/01/28/case/vendas_alpha.csv bucket! 
- The process_id is 5ef196823ef64eaf. Please check the metadata file if you need more information about the pipeline -  csv_to_gcp - auxiliar.py - 2024-01-28 05:39:27,413
-carregando o arquivo vendas_beta para o GCS. -  carregar_csv - <ipython-input-1-e3f69ee072d3> - 2024-01-28 05:39:27,417
-The param *local_source was set in order to check if the *local_csv is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:27,420
-Valid parameter *local_csv was set! -  input_check - auxiliar.py - 2024-01-28 05:39:27,423
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:27,428
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 05:39:27,430
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:27,432
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 05:39:27,434
-Dataframe criado e metadados inseridos. -  csv_to_gcp - auxiliar.py - 2024-01-28 05:39:27,453
-File vendas_beta containing 101 rows was stored in 2024/01/28/case/vendas_beta.csv bucket! 
- The process_id is 307434b88f184b18. Please check the metadata file if you need more information about the pipeline -  csv_to_gcp - auxiliar.py - 2024-01-28 05:39:28,413
-carregando o arquivo produtos para o GCS. -  carregar_csv - <ipython-input-1-e3f69ee072d3> - 2024-01-28 05:39:28,416
-The param *local_source was set in order to check if the *local_csv is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:28,420
-Valid parameter *local_csv was set! -  input_check - auxiliar.py - 2024-01-28 05:39:28,424
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:28,428
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 05:39:28,430
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:28,432
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 05:39:28,435
-Dataframe criado e metadados inseridos. -  csv_to_gcp - auxiliar.py - 2024-01-28 05:39:28,444
-File produtos containing 10 rows was stored in 2024/01/28/case/produtos.csv bucket! 
- The process_id is 995d3b111f70403e. Please check the metadata file if you need more information about the pipeline -  csv_to_gcp - auxiliar.py - 2024-01-28 05:39:29,378
-carregando o arquivo calendario para o GCS. -  carregar_csv - <ipython-input-1-e3f69ee072d3> - 2024-01-28 05:39:29,379
-The param *local_source was set in order to check if the *local_csv is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:29,380
-Valid parameter *local_csv was set! -  input_check - auxiliar.py - 2024-01-28 05:39:29,380
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:29,381
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 05:39:29,382
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:29,383
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 05:39:29,384
-Dataframe criado e metadados inseridos. -  csv_to_gcp - auxiliar.py - 2024-01-28 05:39:29,394
-File calendario containing 180 rows was stored in 2024/01/28/case/calendario.csv bucket! 
- The process_id is 6ab931d8ec6e4503. Please check the metadata file if you need more information about the pipeline -  csv_to_gcp - auxiliar.py - 2024-01-28 05:39:30,318
-The param *local_source was set in order to check if the *local_json is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:30,333
-Valid parameter *local_json was set! -  input_check - auxiliar.py - 2024-01-28 05:39:30,334
-The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:30,335
-Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-28 05:39:30,336
-The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-28 05:39:30,337
-Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-28 05:39:30,338
+carregando o arquivo vendas_alpha para o GCS. -  carregar_csv - <ipython-input-1-a68e5b1421fc> - 2024-01-29 12:21:41,676
+The param *local_source was set in order to check if the *local_csv is a valid input. -  input_check - auxiliar.py - 2024-01-29 12:21:41,677
+Valid parameter *local_csv was set! -  input_check - auxiliar.py - 2024-01-29 12:21:41,677
+The param *datalake was set in order to check if the *landing is a valid input. -  input_check - auxiliar.py - 2024-01-29 12:21:41,678
+Valid parameter *landing was set! -  input_check - auxiliar.py - 2024-01-29 12:21:41,678
+The param *frequency was set in order to check if the *daily is a valid input. -  input_check - auxiliar.py - 2024-01-29 12:21:41,679
+Valid parameter *daily was set! -  input_check - auxiliar.py - 2024-01-29 12:21:41,679
+Dataframe criado e metadados inseridos. -  csv_to_gcp - auxiliar.py - 2024-01-29 12:21:41,712

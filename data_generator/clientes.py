@@ -1,5 +1,7 @@
-# import sys
-# sys.path.append(r'C:\Users\SALA443\Desktop\Estudos\GCP\case_env\Lib\site-packages')
+from variaveis import *
+import sys
+sys.path.append(sources['virtualenv'])
+from variaveis import *
 import names
 import random
 import uuid
@@ -75,5 +77,5 @@ for n in range(numero_de_registros):
 file = json.dumps(data)
 
 
-with open("/workspaces/app/sources/mongo/clientes.json", "w") as arquivo:
+with open(f"{sources['local_json']}clientes.json", "w") as arquivo:
     arquivo.write(file)

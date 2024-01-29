@@ -19,7 +19,7 @@ def carregar_csv(arquivos:list):
         print(f'carregando {arquivo}')
         extract(
         arquitecture=['local_source','datalake'],
-        source='container_csv',
+        source='local_csv',
         destination='landing',
         filename=arquivo,
         context='case',
@@ -31,7 +31,7 @@ def carregar_mongo_para_gcs():
 
     extract(
     arquitecture=['local_source','datalake'],
-    source='container_json',
+    source='local_json',
     destination='landing',
     filename='clientes',
     context='case',
@@ -76,8 +76,7 @@ def carrega_obt_na_consume():
     
 
 if __name__ == "__main__":
-    
-    
+        
     carregar_csv(['vendas_alpha','vendas_beta','produtos','calendario'])
     carregar_mongo_para_gcs()
     carrega_csv_da_landing_para_processed(['vendas_alpha','vendas_beta','produtos','calendario'])

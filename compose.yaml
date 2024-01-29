@@ -4,41 +4,14 @@ networks:
   case_de:
     driver: bridge
 
-services:
-  postgres:
-    container_name: postgres
-    image: postgres:latest
-    networks:
-      - case_de
-    environment:
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PW}
-      - POSTGRES_DB=${POSTGRES_DB} #optional (specify default database instead of $POSTGRES_DB)
-    ports:
-      - "5432:5432"
-
-    restart: always
-
-  pgadmin:
-    container_name: pgadmin
-    image: dpage/pgadmin4:latest
-    networks:
-      - case_de
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_MAIL}
-      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_PW}
-    ports:
-      - "5050:80"
-
-    restart: always
-  
+services:  
   pythonapp:
     container_name: python_case
     build: ./
     networks:
       - case_de
     depends_on:
-      - postgres
+      - mongo
     ports:
       - "8888:80"
 
@@ -49,9 +22,46 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME = ${MONGO_INITDB_ROOT_USERNAME}
       - MONGO_INITDB_ROOT_PASSWORD = ${MONGO_INITDB_ROOT_PASSWORD}
-    depends_on:
-      - pythonapp
+
     ports:
       - "27017:27017"
+  mysql:
+    image: mysql:latest
+    networks:
+      - case_de
+    environment:
+      - MYSQL_ROOT_PASSWORD = ${MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER = ${MYSQL_USER}
+      - MYSQL_PASSWORD = ${MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+      - "1433:1433"
+
+  # postgres:
+  #   container_name: postgres
+  #   image: postgres:latest
+  #   networks:
+  #     - case_de
+  #   environment:
+  #     - POSTGRES_USER=${POSTGRES_USER}
+  #     - POSTGRES_PASSWORD=${POSTGRES_PW}
+  #     - POSTGRES_DB=${POSTGRES_DB} #optional (specify default database instead of $POSTGRES_DB)
+  #   ports:
+  #     - "5432:5432"
+
+  #   restart: always
+
+  # pgadmin:
+  #   container_name: pgadmin
+  #   image: dpage/pgadmin4:latest
+  #   networks:
+  #     - case_de
+  #   environment:
+  #     - PGADMIN_DEFAULT_EMAIL=${PGADMIN_MAIL}
+  #     - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_PW}
+  #   ports:
+  #     - "5050:80"
+
+  #   restart: always
 
       
