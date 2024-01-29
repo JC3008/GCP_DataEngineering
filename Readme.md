@@ -70,6 +70,7 @@ Para checar a coleção, abra mais um terminal e execute:
 * db.clientes.find({})
 
 # Looker <br>
+Abaixo o relatório gerado na plataforma Looker. Esse relatório usa como fonte uma tabela gerada no Bigquery, que foi alimentada com uma tabela OBT das vendas de Janeiro na camada consume do datalake.
 
 ![Alt text](imagens/looker.png)
 
